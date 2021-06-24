@@ -18,7 +18,7 @@ def function():
 - If the function is not called the code would execute with no errors but no output
 - DRY - Don't Repeat Yourself by declaring functions and re-using code
 
-####Second iteration using return statement
+#### Second iteration using return statement
 ```py
 def function():
     print("This is the print function")
