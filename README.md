@@ -95,7 +95,7 @@ print(random.random())  # A random float between 0.0 and 0.99 is generated every
 ```
 
 #### Interacting with the machine using python
-#####`os` Module
+##### `os` Module
 ```python
 import os  # used to get information about the operating system of the machine
 ```
