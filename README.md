@@ -4,7 +4,7 @@
 **DRY** - Don't Repeat Yourself
 
 Let's create a function
-- Syntax -> def is used to declare followed by name of the function():
+- Syntax -> `def` is used to declare followed by name of the `function():`
 
 #### First iteration
 ```python
