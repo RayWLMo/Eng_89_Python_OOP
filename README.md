@@ -1,13 +1,18 @@
-# Object orientated programming (OOP) in Python
-## Four Pillars of OOP
+# Object Orientated Programming (OOP) in Python
+## Four Pillars/Principles of OOP
 ### Abstraction
-Remove unnecessary information that doesn't need to be seen by the user
+Abstraction is the removal of information that doesn't need to be seen by the user such as the implementation of the code
+- Usually this also includes emphasis on how to use the apllication/program.
 ### Inheritance
-
+Inheritance is the transfer of functions from a parent class to it's sub-class.
 ### Encapsulation
-Only authorised users can see restricted data
+Encapsulation is the action of restricting data unless requested by an authorised user.
+
+This might include restricting access to methods and attributes of a certain class from the developer so that code has a smaller chance of being tampered with or accidentally modified.
 ### Polymorphism
-### Demonstrating the 4 Pillars of OOP
+Polymorphism is the ability of coding properties and methods in separate classes without linking them so that they operate in similar and logical ways.
+Alternatively it describes seeing the same thing in different forms
+### Demonstrating the 4 Pillars/Principles of OOP
 #### Step 1 - Creating an Animal class
 - Step one: create an animal.py file to create a parent class
 ```python
