@@ -1,5 +1,149 @@
 # Object orientated programming (OOP) in Python
 ## Four Pillars of OOP
+### Abstraction
+Remove unnecessary information that doesn't need to be seen by the user
+### Inheritance
+
+### Encapsulation
+Only authorised users can see restricted data
+### Polymorphism
+### Demonstrating the 4 Pillars of OOP
+#### Step 1 - Creating an Animal class
+- Step one: create an animal.py file to create a parent class
+```python
+class Animal:  # follow the correct naming convention (capitalized for classes)
+```
+
+Declaring attributes in the init method
+- Initialise with built-in method called __init__(self)
+- `self` refers to current class
+```py
+    def __init__(self):  # Declaring attributes in the init method
+        self.alive = True
+        self.spine = True
+        self.eyes = True
+        self.lungs = True
+```
+Declaring methods/behaviours
+```py
+    def breathe(self):
+        return "Keep breathing to stay alive"
+
+    def eat(self):
+        return "Keep eating to stay alive"
+
+    def move(self):
+        return "Move around to stay aware"
+```
+We need to create an object of this class in order to use any methods
+```py
+cat = Animal()  # Creating an object of Animal class
+```
+For `cat` as a user, the functionality inside Animal class and the method breathe is abstracted
+```py
+print(cat.eat())
+print(cat.breath())  
+```
+#### Step 2 - Create a reptile class to inherit Animal class
+- Step two: Create a file called reptile.py to abstract data and inherit from animal.py
+
+if not in the same directory, the class needs to be imported with an absolute path
+
+ - Because they are in the directory, it can be imported as so.
+```py
+from animal import Animal
+```
+Declaring Attributes
+```py
+class Reptile(Animal):  # Inheriting from Animal class
+
+    def __init__(self):
+        super().__init__()  # super() is used to inherit everything from the parent class
+        self.cold_blooded = True
+        self.heart_chambers = [3, 4]
+```
+Declaring Methods/behaviours
+```py
+    def seek_heat(self):
+        return "Must sit in the sun for some heat"
+
+    def hunt(self):
+        return "Must hunt for food to survive"
+
+    def use_venom(self):
+        return "Uses venom on prey and potential threats"
+```
+Creating an object of the Reptile class
+```py
+smart_reptile = Reptile()
+print(smart_reptile.breathe())  # breathe() method is inherited from Animal class
+print(smart_reptile.hunt())  # hunt() is available in Reptile class
+```
+#### Step 3 - Creating a Snake class
+- step three: create a file called snake.py
+Importing the class from last step
+```py
+from reptile import Reptile
+```
+Declaring Attributes
+```py
+class Snake(Reptile):
+
+    def __init__(self):
+        super().__init__()
+        self.forked_tongue = True
+        self.tetrapods = False
+```
+Adding specific methods/behaviours
+```py
+    def use_tongue_to_smell(self):
+        return "Uses tongue to seek out prey by smelling"
+
+    def slithers_to_move(self):
+        return "Slides side to side in a slither motion to move"
+
+```
+Creating an object of Snake class
+```py
+smart_snake = Snake()
+print(smart_snake.move())  # move() is inherited from Animal class
+print(smart_snake.hunt())  # hunt() is inherited from Reptile class
+print(smart_snake.use_tongue_to_smell())  # use_tongue_to_smell() is available from Snake class
+```
+#### Step 4 - Creating a Python class
+- step four: create a file called python.py and this point we should be able to utilise inheritance from multiple classes - everything available
+Importing from last step
+```py
+from snake import Snake
+```
+Declaring Attributes
+```py
+class Python(Snake):
+    def __init__(self):
+        super().__init__()
+        self.large = True
+        self.two_lungs = True
+```
+Declaring Methods/behaviours
+```py
+    def digest_large_prey(self):
+        return "Digests large animals so has a wider selection of prey"
+
+    def climb(self):
+        return "Able to climb up trees and other various vertical surfaces"
+
+    def constricts_prey(self):
+        return "Able to constrict prey to kill them effectively"
+```
+Creating an object of Python class
+```py
+fast_python = Python()
+print(fast_python.move())  # move() is inherited from Animal class
+print(fast_python.hunt())  # hunt() inherited from Reptile class
+print(fast_python.use_tongue_to_smell())  # use_tongue_to_smell() is inherited from Snake class
+print(fast_python.constricts_prey())  # constricts_prey() is available from Python class
+```
+
 ## Functions and good practice of functions
 **DRY** - Don't Repeat Yourself
 
@@ -67,7 +211,7 @@ print(multiply(4, 6))
 
 To import specifically from a file
 ```py
-from random import random
+from file_name import Class_Name
 ```
 
 #### `math` Module
